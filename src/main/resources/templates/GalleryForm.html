@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+ <th:block  th:insert="Header.html"></th:block>
+  <div class="container-fluid">
+   
+      <div class="card">
+       
+        <div class="card-header bg-primary text-white text-center">
+          <h4>Image Gallery</h4>
+        </div>
+        
+        <div class="card-body">
+             
+             <span th:each="imgname : ${imgList}">
+             
+                <img th:src="@{'/images/'+${imgname}}">
+             
+            </span>
+              
+        
+        </div>
+        
+        
+        <div class="card-footer text-center bg-warning">
+           <h6>copyright@2023</h6>
+        </div>
+      
+      
+      
+      
+      </div>
+   
+   
+   
+   
+   
+   </div>
+   
+
+
+</body>
+</html>

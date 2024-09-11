@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>department_edit</title>
+
+
+</head>
+<body>
+
+<th:block  th:insert="Header.html"></th:block>
+   <div class="container-fluid">
+   
+      <div class="card">
+       
+        <div class="card-header bg-primary text-white text-center">
+          <h4>Department Edit Form</h4>
+        </div>
+        
+        <div class="card-body">
+        
+        <form action="/dept/update" method="post" th:object="${dModel}">
+        
+        
+           <div class="row p-2">
+              <div class="col-4">Department Name</div>
+              <div class="col-6">
+               <input type="text" th:field="*{dpt_name}" class="form-control" >
+              </div>
+           </div>
+           
+           
+            <div class="row p-2">
+              <div class="col-4">Department Phone</div>
+              <div class="col-6">
+               <input type="text" th:field="*{dpt_phone}" class="form-control" >
+              </div>
+           </div>
+           
+            <div class="row p-2">
+              <div class="col-4">Department Head(HOD)</div>
+              <div class="col-6">
+               <input type="text" th:field="*{dpt_hod}" class="form-control" >
+              </div>
+           </div>
+           
+            <div class="row p-2">
+              <div class="col-4"></div>
+              <div class="col-6">
+               <input type="submit" value="Update" class="btn btn-success btn-lg" >
+              </div>
+           </div>
+               
+               <input type="hidden" th:field="*{dpt_id}">
+           </form>
+        
+        </div>
+        
+        
+        <div class="card-footer text-center bg-warning">
+           <h6>copyright@2023</h6>
+        </div>
+      
+      
+      
+      
+      </div>
+   
+   
+   
+   
+   
+   </div>
+
+
+
+</body>
+</html>
