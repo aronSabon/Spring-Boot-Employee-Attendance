@@ -13,6 +13,7 @@ public interface LeaveApproveService {
 	void updateLeaveApprove(LeaveApprove leaveApprove);
 	List<LeaveApprove> getAllLeaveApprove();
 	List<LeaveApprove> getAllLeaveByFullName(String firstName, String lastName);
+	List<LeaveApprove> getAllLeaveBySearch(String sData);
 
 	
 }

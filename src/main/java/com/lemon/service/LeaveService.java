@@ -15,5 +15,6 @@ public interface LeaveService {
 	List<Leave> getAllLeave();
 	Leave getLeaveById(int id);
 	List<Leave> getAllLeaveByFullName(String firstName, String lastName);
+	List<Leave> getAllLeaveBySearch(String sData);
 	
 }

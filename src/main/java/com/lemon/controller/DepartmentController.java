@@ -31,15 +31,24 @@ public class DepartmentController {
 		return "DepartmentForm";
 	}
    
+  @GetMapping("/departmentListAdmin")  
+   public String getDptListAdmin(Model model) {
+	  
+	  
+	  
+	  model.addAttribute("dList",deptService.getAllDept());
+	   return "DepartmentListAdmin";
+	
+   }
   @GetMapping("/departmentList")  
-   public String getDptList(Model model) {
+  public String getDptList(Model model) {
 	  
 	  
 	  
 	  model.addAttribute("dList",deptService.getAllDept());
 	   return "DepartmentListForm";
 	
-   }
+  }
   
   
   @GetMapping("/dept/delete")

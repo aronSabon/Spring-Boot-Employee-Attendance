@@ -49,4 +49,10 @@ public class LeaveServiceImpl implements LeaveService{
 		return leaveRepository.findByFirstNameAndLastName(firstName, lastName);
 	}
 
+	@Override
+	public List<Leave> getAllLeaveBySearch(String sData) {
+		// TODO Auto-generated method stub
+		return leaveRepository.findByText(sData);
+	}
+
 }

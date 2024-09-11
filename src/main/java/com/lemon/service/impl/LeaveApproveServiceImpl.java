@@ -43,4 +43,10 @@ public class LeaveApproveServiceImpl implements LeaveApproveService{
 		return leaveApproveRepository.findByFirstNameAndLastName(firstName, lastName);
 	}
 
+	@Override
+	public List<LeaveApprove> getAllLeaveBySearch(String sData) {
+		// TODO Auto-generated method stub
+		return leaveApproveRepository.findByText(sData);
+	}
+
 }
